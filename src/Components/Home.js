@@ -18,7 +18,11 @@ const Home = () => {
             }}>
             <Navigation>
 
-                <LeftNav><i>Pesto <sup>Free </sup></i> 
+                <LeftNav><i>Pesto <sup style={{
+                    backgroundColor:'yellow',
+                    color:'black',
+                    padding:'0px 5px'
+                }}>Free </sup></i> 
                 <p>ITALIAN FOOD</p>
                 </LeftNav>
 
@@ -27,6 +31,8 @@ const Home = () => {
                 <Link to='/about'>ABOUT</Link>
                 <Link to='/typography'>TYPOGRAPHY</Link>
                 <Link to='/contacts'>CONTACTS</Link>
+                <Link to='/task2'>TASK2</Link>
+                <Link to='/task3'>TASK3</Link>
                 </MiddleNav>
 
                 <RightNav>
@@ -99,7 +105,7 @@ const Home = () => {
                     >
                     <nav>
                         <div>
-                        <a href="">Mains</a> <a href="">Desserts</a> <a href="">Drinks</a>
+                        <a href="/">Mains</a> <a href="/">Desserts</a> <a href="/">Drinks</a>
                         </div>
 
                         
@@ -112,11 +118,15 @@ const Home = () => {
                         display:'flex',
                         justifyContent:'center',
                         backgroundColor:'white',
-                        width:'800px'
+                        width:'800px',
+                        paddingBottom:'50px'
                     }}>
-                            <p>
+                            <p >
                                 <br />
-                                $25.89 <br />
+                                <span style={{
+                                    color:'green'
+                                 }}>$25.89</span>
+                                 <br />
                                 <br />
                                  <h2>Osso Buco</h2>
                                  <br />
@@ -125,21 +135,30 @@ const Home = () => {
 
                                  <br />
                                  <br />
-                                 $16.89 <br />
+                                 <span style={{
+                                    color:'green'
+                                 }}>$16.89</span>
+                                  <br />
                                  <br />
                                  <h2>Pupper Delle</h2>
                                  <br />
                                  This delicius dish tops long wide pasta with scallops lobstar,asparagus,butter,sage and <br />
                                   truffle oil to cutter every plate. <br />
                                  <br />
-                                 $17.89 <br />
+                                 <span style={{
+                                    color:'green'
+                                 }}>$17.89</span>
+                                  <br />
                                  <br />
                                  <h2>Trippa Satriano</h2><br />
                                  <br />
                                  Thinly sliced herb encrusted ahi tuna topped with diced tomatoes,olives,capers,red onions <br />
                                  and fennel.Perfect chioce even for the first time visitors! <br />
                                  <br />
-                                 $18.89 <br />
+                                 <span style={{
+                                    color:'green'
+                                 }}>$18.89</span>
+                                  <br />
                                  <br />
                                  <h2>Filetto Di Manzo</h2>
                                  <br />
@@ -211,8 +230,45 @@ const Home = () => {
                     <SeventhSubDiv>
                         <h1>Get Multipurpose  <b>Monstroid</b><sup>2</sup> Template!</h1> <br />
                         <p>400+ HTML Files <span></span> 21 Niche Templates <span></span> All Source Files <span></span> Regular Updates</p>
+                        <br />
+                        
+
+                        <button>VIEW NOW!</button>
                     </SeventhSubDiv>
             </SeventhDiv>
+
+
+            <EightDiv>
+            <LeftNav><i>Pesto <sup style={{
+                    backgroundColor:'yellow',
+                    color:'black',
+                    padding:'0px 5px'
+                }}>Free </sup></i> 
+                <p>ITALIAN FOOD</p>
+                </LeftNav>
+
+                <br />
+                <br />
+                <br />
+                <br />
+
+
+                <LastNavDiv>
+                    <Link to='/'>MENU</Link>
+                    <Link to='/'>BLOG</Link>
+                    <Link to='/contacts'>CONACTS</Link>
+                    <Link to='/'>GALLERY</Link>
+                    <Link to='/about'>ABOUT</Link>
+                </LastNavDiv>
+                <br />
+                <br />
+                <br />
+                <p style={{
+                    color:'rgb(220, 217, 217)'
+                }}>
+                    2022 Pesto.All Rights Reserved.Privacy Policy.Design By Muhammad Asif.
+                </p>
+            </EightDiv>
             
         </Container>
     );
@@ -306,6 +362,7 @@ display:flex;
 justify-content:space-evenly;
 align-items:center;
 width:100vw;
+padding-top:50px;
 div{
     h1{
         font-size:40px;
@@ -399,6 +456,7 @@ const SeventhDiv=style.div`
 const SeventhSubDiv=style.div`
 background-color: rgb(66, 82, 205);
 color:white;
+padding-bottom:20px;
 p{
     span{
         background-color:blue;
@@ -406,6 +464,13 @@ p{
         width:0.2px;
         cursor:pointer;
     }
+}
+button{
+    background-color: rgb(249, 249, 16);
+    font-weight:bold;
+    border:none;
+    padding:10px 15px;
+    cursor:pointer;
 }
 `
 
@@ -418,8 +483,25 @@ align-items: center;
 height: 150px;
 position: absolute;
 background-color:white;
-top:480px;
+top:420px;
 left:300px;
 box-shadow:10px 10px 5px  rgb(202, 199, 199);
 `
-const TaskSubDiv=style.div``
+
+const EightDiv=style.div`
+padding:50px 0px;
+background-color:rgb(62, 61, 61);
+display:flex;
+flex-direction:column;
+align-items:center;
+`
+
+const LastNavDiv=style.div`
+width:500px;
+display:flex;
+justify-content:space-evenly;
+a{
+    text-decoration:none;
+    color:white;
+}
+`
